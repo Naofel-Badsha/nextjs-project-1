@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { DiJoomla } from "react-icons/di";
 import { HiBars3BottomRight } from 'react-icons/hi2';
+import ThemeToggler from '../../Helper/ThemeToggler';
 
 
 type Props = {
@@ -23,12 +24,12 @@ const Nav = ({openNav}: Props) => {
   },[])
   
     return (
-      <div className={`transition-all ${navBg ? "bg-white shadow-md" : "fixed"} duration-200 py-4 z-[10000] fixed w-full`}>
+      <div className={`transition-all ${navBg ? "bg-white dark:bg-gray-900 shadow-md" : "fixed"} duration-200 py-4 z-[10000] fixed w-full`}>
         <div className="flex items-center h-full justify-between w-[92%] mx-auto">
           <div className="flex items-center sm:space-x-20 ">
             {/*--------Logo------------*/}
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-cyan-800 rounded-full flex items-center justify-center flex-col">
+              <div className="w-10 h-10 bg-cyan-800 dark:bg-white rounded-full flex items-center justify-center flex-col">
                 <DiJoomla className="text-2xl text-white" />
               </div>
               <h1 className="text-cyan-800 hidden sm:block md:text-2xl font-bold">
@@ -61,6 +62,7 @@ const Nav = ({openNav}: Props) => {
               Job Post
             </button>
             {/*----------Theme------Toggler-------*/}
+            <ThemeToggler />
 
             {/*----------Hamburger------Menu-------*/}
             <HiBars3BottomRight onClick={openNav} className='lg:hidden w-8 h-8 cursor-pointer text-black'/>
