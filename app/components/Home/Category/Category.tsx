@@ -8,6 +8,7 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 import { MdOutlineMedicalServices } from "react-icons/md";
 import { LiaCarSideSolid } from "react-icons/lia";
 import SectionHeading from '../../Helper/SectionHeading';
+import CategoryCard from './CategoryCard';
 
 const jobCategories = [
   {
@@ -72,7 +73,20 @@ const jobCategories = [
 const Category = () => {
     return (
         <section className='pt-16 pb-16'>
-            <SectionHeading heading="" subHeading=""/>
+            <SectionHeading 
+            heading="Popular Job Categories" 
+            subHeading="2020 jobs live - 293 added today."/>
+        
+        <div className='w-[80%] mx-auto mt-16 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+        {
+          jobCategories.map((categorie) =>{
+            return <div key={categorie.id}>
+              <CategoryCard categorie={categorie}/>
+            </div>
+          })
+        }
+        </div>
+        
         </section>
     );
 };
