@@ -3,10 +3,12 @@
 import React from 'react';
 import Tilt from 'react-parallax-tilt'
 type Props = {
+    categorie: {
     id: number;
     categoryName: string;
     openPositions: number;
     icon: React.JSX.Element;
+    }
 }
 
 const CategoryCard = ({categorie}: Props) => {
