@@ -1,18 +1,17 @@
-import React from 'react';
+import React from "react";
 type Props = {
-    heading: string;
-    subHeading: string;
-}
+  heading: string;
+  subHeading: string;
+};
 
 const SectionHeading = ({ heading, subHeading }: Props) => {
   return (
     <div>
       <h1 className="sm:text-3xl text-2xl font-bold ☐ text-gray-800 dark:text-gray-200 text-center">
-     {heading}
+        {heading}
       </h1>
       <p
-        className="text-center mt-3text-gray-500
-dark:text-gray-400"
+        className="text-center mt-3text-gray-500 dark:text-gray-400"
       >
         {subHeading}
       </p>
