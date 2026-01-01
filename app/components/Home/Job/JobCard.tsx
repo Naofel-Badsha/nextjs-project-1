@@ -41,17 +41,19 @@ const JobCard = ({ job }: Props) => {
           </div>
         </div>
       </div>
-      <div className="flex items-center space-x-4 mt-3 dark:bg-blue-950/30 rounded-full text-xs text-blue-700 dark:text-blue-300">
-        {job.jobType}
-      </div>
-      <div
-        className={`px-4 py-1 rounded-full text-xs ${
-          job.urgency === "urgency"
-            ? "bg-red-600/30 dark:bg-red-300/30 text-red-700 dark:text-red-300"
-            : "bg-green-600/30 text-green-700 dark:text-green-300"
-        }`}
-      >
-        {job.urgency}
+      <div className="flex items-center space-x-4 mt-3">
+        <div className="px-4 py-1 bg-blue-600/30 dark:bg-blue-950/30 rounded-full text-xs text-blue-700 dark:text-blue-300">
+          {job.jobType}
+        </div>
+        <div
+          className={`px-4 py-1 rounded-full text-xs ${
+            job.urgency === "Urgent"
+              ? "bg-red-600/30 dark:bg-red-300/30 text-red-700 dark:text-red-300"
+              : "bg-green-600/30 text-green-700 dark:text-green-300"
+          }`}
+        >
+          {job.urgency}
+        </div>
       </div>
     </div>
   );
