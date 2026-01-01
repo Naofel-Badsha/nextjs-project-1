@@ -7,7 +7,7 @@ type Props = {
 const SectionHeading = ({ heading, subHeading }: Props) => {
   return (
     <div>
-      <h1 className="sm:text-3x1 text-3x1 font-bold ☐ text-gray-800 dark: text-gray-200 text-center">
+      <h1 className="sm:text-3xl text-2xl font-bold ☐ text-gray-800 dark:text-gray-200 text-center">
      {heading}
       </h1>
       <p
