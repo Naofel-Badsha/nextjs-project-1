@@ -54,7 +54,7 @@ const Nav = ({openNav}: Props) => {
           {/*----------Button------------*/}
           <div className="flex items-center space-x-4">
             {/*------Login/Register---Button------*/}
-            <button className="px-8 py-2.5 sm:text-sm rounded-lg cursor-pointer bg-gray-100 hover:bg-gray-300 transition-all duration-300">
+            <button className="px-8 py-2.5 sm:text-sm rounded-lg cursor-pointer bg-gray-100 hover:bg-gray-300 transition-all duration-300 hidden xl:block">
               Login & Register
             </button>
             {/*------Job/Post---Button------*/}
